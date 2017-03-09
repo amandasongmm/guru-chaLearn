@@ -70,6 +70,12 @@ def sample_all_video():
     start_time = time.time()
     p = Params(config_path='params.cfg')
     generate_mp4_list(p)
+    
+    if not os.path.exists(p.crop_full_im_dir):
+        os.makedirs(p.crop_full_im_dir)
+    
+    if not os.path.exists(p.crop_face_im_dir):
+        os.makedirs(p.crop_face_im_dir)    
 
     with open(p.mp4_list_file) as f:  # Iteratively process all 6000 videos.
         file_list = f.readlines()
