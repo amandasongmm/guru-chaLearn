@@ -142,3 +142,4 @@ ENV/
 ./pipeline/vgg16-0000.params
 *.npz
 *.jpg
+*.ipynb
